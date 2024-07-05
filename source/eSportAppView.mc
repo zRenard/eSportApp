@@ -73,7 +73,7 @@ class eSportAppDelegate extends WatchUi.BehaviorDelegate {
 	}
 
 	function makeHRRequest() {
-		var url = "http://localhost:90/add_heart_rate.php";
+		var url = Application.Properties.getValue("ServerURL");
 		var params = {
             "heart_rate" => currentHR
        };

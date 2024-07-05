@@ -1,0 +1,28 @@
+{
+  "settings" : [ {
+    "key" : "ServerURL",
+    "valueType" : "string",
+    "defaultValue" : "http://localhost:90/add_heart_rate.php",
+    "configTitle" : "ServerURLTitle",
+    "configPrompt" : null,
+    "configType" : "alphaNumeric",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  } ],
+  "supportsLiveValidation" : false,
+  "languages" : {
+    "valyrian" : {
+      "menu_label_1" : "Item 1",
+      "menu_label_2" : "Item 2",
+      "ServerURLTitle" : "Server URL to publish data",
+      "prompt" : "Click the menu button",
+      "AppName" : "eSportApp"
+    }
+  }
+}

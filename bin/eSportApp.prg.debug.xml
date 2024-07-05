@@ -52,45 +52,45 @@
         <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="17" lineNum="30" parent="globals/eSportAppDelegate" pc="268436145" symbol="onMenu"/>
         <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="18" lineNum="75" parent="globals/eSportAppDelegate" pc="268436147" symbol="makeHRRequest"/>
         <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="18" lineNum="76" parent="globals/eSportAppDelegate" pc="268436150" symbol="makeHRRequest"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="18" lineNum="77" parent="globals/eSportAppDelegate" pc="268436157" symbol="makeHRRequest"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="18" lineNum="81" parent="globals/eSportAppDelegate" pc="268436175" symbol="makeHRRequest"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="18" lineNum="86" parent="globals/eSportAppDelegate" pc="268436208" symbol="makeHRRequest"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="66" parent="globals/eSportAppDelegate" pc="268436241" symbol="onHRReceive"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="67" parent="globals/eSportAppDelegate" pc="268436243" symbol="onHRReceive"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="68" parent="globals/eSportAppDelegate" pc="268436252" symbol="onHRReceive"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="70" parent="globals/eSportAppDelegate" pc="268436270" symbol="onHRReceive"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="72" parent="globals/eSportAppDelegate" pc="268436296" symbol="onHRReceive"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="20" lineNum="24" parent="globals/eSportAppDelegate" pc="268436308" symbol="initialize"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="20" lineNum="25" parent="globals/eSportAppDelegate" pc="268436310" symbol="initialize"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="33" parent="globals/eSportAppDelegate" pc="268436323" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="34" parent="globals/eSportAppDelegate" pc="268436325" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="35" parent="globals/eSportAppDelegate" pc="268436340" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="36" parent="globals/eSportAppDelegate" pc="268436365" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="41" parent="globals/eSportAppDelegate" pc="268436414" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="42" parent="globals/eSportAppDelegate" pc="268436463" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="43" parent="globals/eSportAppDelegate" pc="268436475" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="44" parent="globals/eSportAppDelegate" pc="268436487" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="45" parent="globals/eSportAppDelegate" pc="268436505" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="48" parent="globals/eSportAppDelegate" pc="268436516" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="50" parent="globals/eSportAppDelegate" pc="268436550" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="51" parent="globals/eSportAppDelegate" pc="268436573" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="52" parent="globals/eSportAppDelegate" pc="268436603" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="53" parent="globals/eSportAppDelegate" pc="268436615" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="54" parent="globals/eSportAppDelegate" pc="268436627" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="55" parent="globals/eSportAppDelegate" pc="268436645" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="56" parent="globals/eSportAppDelegate" pc="268436657" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="57" parent="globals/eSportAppDelegate" pc="268436665" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="58" parent="globals/eSportAppDelegate" pc="268436677" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="60" parent="globals/eSportAppDelegate" pc="268436688" symbol="onSelect"/>
-        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="63" parent="globals/eSportAppDelegate" pc="268436706" symbol="onSelect"/>
-        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="22" lineNum="13" parent="globals/Rez/Layouts" pc="268436708" symbol="MainLayout"/>
-        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="22" lineNum="14" parent="globals/Rez/Layouts" pc="268436719" symbol="MainLayout"/>
-        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="22" lineNum="16" parent="globals/Rez/Layouts" pc="268436838" symbol="MainLayout"/>
-        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="23" lineNum="21" parent="globals/Rez/Menus/MainMenu" pc="268436848" symbol="&lt;init&gt;"/>
-        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="24" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268436860" symbol="initialize"/>
-        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="24" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268436862" symbol="initialize"/>
-        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="24" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268436874" symbol="initialize"/>
-        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="24" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268436919" symbol="initialize"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="18" lineNum="77" parent="globals/eSportAppDelegate" pc="268436175" symbol="makeHRRequest"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="18" lineNum="81" parent="globals/eSportAppDelegate" pc="268436193" symbol="makeHRRequest"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="18" lineNum="86" parent="globals/eSportAppDelegate" pc="268436226" symbol="makeHRRequest"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="66" parent="globals/eSportAppDelegate" pc="268436259" symbol="onHRReceive"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="67" parent="globals/eSportAppDelegate" pc="268436261" symbol="onHRReceive"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="68" parent="globals/eSportAppDelegate" pc="268436270" symbol="onHRReceive"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="70" parent="globals/eSportAppDelegate" pc="268436288" symbol="onHRReceive"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="19" lineNum="72" parent="globals/eSportAppDelegate" pc="268436314" symbol="onHRReceive"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="20" lineNum="24" parent="globals/eSportAppDelegate" pc="268436326" symbol="initialize"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="20" lineNum="25" parent="globals/eSportAppDelegate" pc="268436328" symbol="initialize"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="33" parent="globals/eSportAppDelegate" pc="268436341" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="34" parent="globals/eSportAppDelegate" pc="268436343" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="35" parent="globals/eSportAppDelegate" pc="268436358" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="36" parent="globals/eSportAppDelegate" pc="268436383" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="41" parent="globals/eSportAppDelegate" pc="268436432" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="42" parent="globals/eSportAppDelegate" pc="268436481" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="43" parent="globals/eSportAppDelegate" pc="268436493" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="44" parent="globals/eSportAppDelegate" pc="268436505" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="45" parent="globals/eSportAppDelegate" pc="268436523" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="48" parent="globals/eSportAppDelegate" pc="268436534" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="50" parent="globals/eSportAppDelegate" pc="268436568" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="51" parent="globals/eSportAppDelegate" pc="268436591" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="52" parent="globals/eSportAppDelegate" pc="268436621" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="53" parent="globals/eSportAppDelegate" pc="268436633" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="54" parent="globals/eSportAppDelegate" pc="268436645" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="55" parent="globals/eSportAppDelegate" pc="268436663" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="56" parent="globals/eSportAppDelegate" pc="268436675" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="57" parent="globals/eSportAppDelegate" pc="268436683" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="58" parent="globals/eSportAppDelegate" pc="268436695" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="60" parent="globals/eSportAppDelegate" pc="268436706" symbol="onSelect"/>
+        <entry filename="C:\\git_clones\\eSportApp\\source\\eSportAppView.mc" id="21" lineNum="63" parent="globals/eSportAppDelegate" pc="268436724" symbol="onSelect"/>
+        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="22" lineNum="13" parent="globals/Rez/Layouts" pc="268436726" symbol="MainLayout"/>
+        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="22" lineNum="14" parent="globals/Rez/Layouts" pc="268436737" symbol="MainLayout"/>
+        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="22" lineNum="16" parent="globals/Rez/Layouts" pc="268436856" symbol="MainLayout"/>
+        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="23" lineNum="21" parent="globals/Rez/Menus/MainMenu" pc="268436866" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="24" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268436878" symbol="initialize"/>
+        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="24" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268436880" symbol="initialize"/>
+        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="24" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268436892" symbol="initialize"/>
+        <entry filename="c:\\git_clones\\eSportApp\\bin\\gen\\006-B4024-00\\source\\Rez.mcgen" id="24" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268436937" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
@@ -112,20 +112,21 @@
         <entry id="8388631" module="true" symbol="Activity"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="28" symbol="prompt"/>
+        <entry field="true" id="29" symbol="prompt"/>
         <entry id="9" object="true" symbol="eSportAppApp"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
-        <entry id="30" symbol="item_2"/>
-        <entry id="29" symbol="item_1"/>
+        <entry id="31" symbol="item_2"/>
+        <entry id="30" symbol="item_1"/>
         <entry id="19" module="true" symbol="Menus"/>
         <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
         <entry id="8389850" symbol="count"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
         <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="26" symbol="ServerURLTitle"/>
         <entry id="20" method="true" symbol="makeHRRequest"/>
         <entry id="8388637" module="true" symbol="Communications"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
@@ -162,8 +163,8 @@
         <entry id="8389125" method="true" symbol="onHide"/>
         <entry field="true" id="15" symbol="session"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry field="true" id="27" symbol="menu_label_2"/>
-        <entry field="true" id="26" symbol="menu_label_1"/>
+        <entry field="true" id="28" symbol="menu_label_2"/>
+        <entry field="true" id="27" symbol="menu_label_1"/>
     </symbolTable>
     <localVars>
         <entry arg="true" endPc="268435672" name="item" stackId="1" startPc="268435606"/>
@@ -171,16 +172,17 @@
         <entry endPc="268436072" name="width" stackId="2" startPc="268435753"/>
         <entry endPc="268436072" name="height" stackId="3" startPc="268435753"/>
         <entry endPc="268436072" name="color" stackId="4" startPc="268435753"/>
-        <entry endPc="268436239" name="url" stackId="1" startPc="268436150"/>
-        <entry endPc="268436239" name="params" stackId="2" startPc="268436150"/>
-        <entry endPc="268436239" name="options" stackId="3" startPc="268436150"/>
-        <entry arg="true" endPc="268436307" name="responseCode" stackId="1" startPc="268436241"/>
-        <entry arg="true" endPc="268436307" name="data" stackId="2" startPc="268436241"/>
-        <entry arg="true" endPc="268436847" name="dc" stackId="1" startPc="268436708"/>
-        <entry endPc="268436847" name="rez_cmp_local_text_7327306229" stackId="2" startPc="268436719"/>
+        <entry endPc="268436257" name="url" stackId="1" startPc="268436150"/>
+        <entry endPc="268436257" name="params" stackId="2" startPc="268436150"/>
+        <entry endPc="268436257" name="options" stackId="3" startPc="268436150"/>
+        <entry arg="true" endPc="268436325" name="responseCode" stackId="1" startPc="268436259"/>
+        <entry arg="true" endPc="268436325" name="data" stackId="2" startPc="268436259"/>
+        <entry arg="true" endPc="268436865" name="dc" stackId="1" startPc="268436726"/>
+        <entry endPc="268436865" name="rez_cmp_local_text_1656046707" stackId="2" startPc="268436737"/>
     </localVars>
     <deviceInfo deviceVersion="4866e5192c0c99025597cd8e6e841f3d774b64f7" partNumber="006-B4024-00"/>
     <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ServerURLTitle"/>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_2"/>
         <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="menu_label_1"/>
@@ -198,7 +200,7 @@
         <dataEntry label="globals/Rez/Layouts" offset="609" parentId="Rez" symbolId="Layouts" type="module"/>
         <dataEntry label="globals/Rez/Menus" offset="644" parentId="Rez" symbolId="Menus" type="module"/>
         <dataEntry label="globals/Rez/Strings" offset="679" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Rez/Menus/MainMenu" offset="741" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="750" parentId="Menus" symbolId="MainMenu" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="eSportAppApp" startPc="268435460">
@@ -269,28 +271,28 @@
         <functionEntry accessMode="public" endPc="268436146" name="onMenu" parent="eSportAppDelegate" startPc="268436074">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436240" name="makeHRRequest" parent="eSportAppDelegate" startPc="268436147">
+        <functionEntry accessMode="public" endPc="268436258" name="makeHRRequest" parent="eSportAppDelegate" startPc="268436147">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436307" name="onHRReceive" parent="eSportAppDelegate" startPc="268436241">
+        <functionEntry accessMode="public" endPc="268436325" name="onHRReceive" parent="eSportAppDelegate" startPc="268436259">
             <param id="responseCode"/>
             <param id="data"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436322" name="initialize" parent="eSportAppDelegate" startPc="268436308">
+        <functionEntry accessMode="public" endPc="268436340" name="initialize" parent="eSportAppDelegate" startPc="268436326">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436707" name="onSelect" parent="eSportAppDelegate" startPc="268436323">
+        <functionEntry accessMode="public" endPc="268436725" name="onSelect" parent="eSportAppDelegate" startPc="268436341">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436847" name="MainLayout" parent="Layouts" startPc="268436708">
+        <functionEntry accessMode="public" endPc="268436865" name="MainLayout" parent="Layouts" startPc="268436726">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436859" name="&lt;init&gt;" parent="MainMenu" startPc="268436848">
+        <functionEntry accessMode="public" endPc="268436877" name="&lt;init&gt;" parent="MainMenu" startPc="268436866">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436964" name="initialize" parent="MainMenu" startPc="268436860">
+        <functionEntry accessMode="public" endPc="268436982" name="initialize" parent="MainMenu" startPc="268436878">
             <documentation/>
         </functionEntry>
     </functions>

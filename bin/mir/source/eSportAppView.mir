@@ -281,52 +281,56 @@ C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_start:
 [ "C:\git_clones\eSportApp\source\eSportAppView.mc" 76 2 ]
         [ "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_start" "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_stop" ]
         %url.1 = local;
-        %tmp.1 = "http://localhost:90/add_heart_rate.php";
-        lputv %url.1 %tmp.1;
+        %tmp.2 = getv ? :Application;
+        %tmp.3 = getv %tmp.2 :Properties;
+        %tmp.4 = getv function %tmp.3 :getValue;
+        %tmp.5 = "ServerURL";
+        %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        lputv %url.1 %tmp.6;
 [ "C:\git_clones\eSportApp\source\eSportAppView.mc" 77 2 ]
         [ "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_start" "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_stop" ]
         %params.2 = local;
-        %tmp.2 = newd 1;
-        %tmp.3 = "heart_rate";
-        %tmp.5 = getv ? :currentHR;
-        %tmp.6 = dup %tmp.2;
-        %tmp.7 = aputv %tmp.6 %tmp.3 %tmp.5;
-        lputv %params.2 %tmp.7;
+        %tmp.7 = newd 1;
+        %tmp.8 = "heart_rate";
+        %tmp.10 = getv ? :currentHR;
+        %tmp.11 = dup %tmp.7;
+        %tmp.12 = aputv %tmp.11 %tmp.8 %tmp.10;
+        lputv %params.2 %tmp.12;
 [ "C:\git_clones\eSportApp\source\eSportAppView.mc" 81 7 ]
         [ "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_start" "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_stop" ]
         %options.3 = local;
-        %tmp.8 = newd 3;
-        %tmp.10 = const :method;
-        %tmp.11 = getm $.Toybox.Communications;
-        %tmp.12 = getv %tmp.11 :HTTP_REQUEST_METHOD_POST;
-        %tmp.13 = dup %tmp.8;
-        %tmp.14 = aputv %tmp.13 %tmp.10 %tmp.12;
-        %tmp.16 = const :headers;
-        %tmp.17 = newd 1;
-        %tmp.18 = "Content-Type";
-        %tmp.19 = getm $.Toybox.Communications;
-        %tmp.20 = getv %tmp.19 :REQUEST_CONTENT_TYPE_URL_ENCODED;
-        %tmp.21 = dup %tmp.17;
-        %tmp.22 = aputv %tmp.21 %tmp.18 %tmp.20;
-        %tmp.23 = dup %tmp.14;
-        %tmp.24 = aputv %tmp.23 %tmp.16 %tmp.22;
-        %tmp.26 = const :responseType;
-        %tmp.27 = getm $.Toybox.Communications;
-        %tmp.28 = getv %tmp.27 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
-        %tmp.29 = dup %tmp.24;
-        %tmp.30 = aputv %tmp.29 %tmp.26 %tmp.28;
-        lputv %options.3 %tmp.30;
+        %tmp.13 = newd 3;
+        %tmp.15 = const :method;
+        %tmp.16 = getm $.Toybox.Communications;
+        %tmp.17 = getv %tmp.16 :HTTP_REQUEST_METHOD_POST;
+        %tmp.18 = dup %tmp.13;
+        %tmp.19 = aputv %tmp.18 %tmp.15 %tmp.17;
+        %tmp.21 = const :headers;
+        %tmp.22 = newd 1;
+        %tmp.23 = "Content-Type";
+        %tmp.24 = getm $.Toybox.Communications;
+        %tmp.25 = getv %tmp.24 :REQUEST_CONTENT_TYPE_URL_ENCODED;
+        %tmp.26 = dup %tmp.22;
+        %tmp.27 = aputv %tmp.26 %tmp.23 %tmp.25;
+        %tmp.28 = dup %tmp.19;
+        %tmp.29 = aputv %tmp.28 %tmp.21 %tmp.27;
+        %tmp.31 = const :responseType;
+        %tmp.32 = getm $.Toybox.Communications;
+        %tmp.33 = getv %tmp.32 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.34 = dup %tmp.29;
+        %tmp.35 = aputv %tmp.34 %tmp.31 %tmp.33;
+        lputv %options.3 %tmp.35;
 [ "C:\git_clones\eSportApp\source\eSportAppView.mc" 86 7 ]
-        %tmp.31 = getm $.Toybox.Communications;
-        %tmp.32 = getv function %tmp.31 :makeWebRequest;
-        %tmp.34 = lgetv %url.1;
-        %tmp.36 = lgetv %params.2;
-        %tmp.38 = lgetv %options.3;
-        %tmp.39 = self;
-        %tmp.40 = getv function %tmp.39 :method;
-        %tmp.42 = const :onHRReceive;
-        %tmp.43 = invoke %tmp.39 %tmp.40(%tmp.42);
-        invoke %tmp.31 %tmp.32(%tmp.34, %tmp.36, %tmp.38, %tmp.43);
+        %tmp.36 = getm $.Toybox.Communications;
+        %tmp.37 = getv function %tmp.36 :makeWebRequest;
+        %tmp.39 = lgetv %url.1;
+        %tmp.41 = lgetv %params.2;
+        %tmp.43 = lgetv %options.3;
+        %tmp.44 = self;
+        %tmp.45 = getv function %tmp.44 :method;
+        %tmp.47 = const :onHRReceive;
+        %tmp.48 = invoke %tmp.44 %tmp.45(%tmp.47);
+        invoke %tmp.36 %tmp.37(%tmp.39, %tmp.41, %tmp.43, %tmp.48);
 C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_stop:
     }
 }
