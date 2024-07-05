@@ -1,0 +1,594 @@
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 1; ]
+import Toybox.WatchUi;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 2; ]
+import Toybox.Communications;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 3; ]
+import Toybox.FitContributor;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 4; ]
+import Toybox.Activity;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 5; ]
+import Toybox.ActivityRecording;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 6; ]
+import Toybox.Timer;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 7; ]
+import Toybox.Lang;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 8; ]
+import Toybox.System;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 10; @position = 6; ]
+const GAME_FIELD_ID = 0;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 11; @position = 6; ]
+const GAME_NAME_LEN = 50;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 12; @position = 4; ]
+var gameField;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 14; @position = 4; ]
+var session = null;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 15; @position = 4; ]
+var timerPostHR;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 16; @position = 4; ]
+var timerGetGame;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 18; @position = 4; ]
+var appStatus = "Waiting";
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 19; @position = 4; ]
+var gameName = "No Game";
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 20; @position = 4; ]
+var currentHR = 0;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 22; ]
+class eSportAppDelegate extends WatchUi.BehaviorDelegate{
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 22; ]
+    <init> {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 22; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 24; ]
+    function initialize() as Void {
+C_git_clones_eSportApp_source_eSportAppView_mc_24_26_26_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 25 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_git_clones_eSportApp_source_eSportAppView_mc_24_26_26_4_stop:
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 28; ]
+    function onMenu() {
+C_git_clones_eSportApp_source_eSportAppView_mc_28_22_31_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 29 8 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :pushView;
+        %tmp.6 = getv ? :Rez;
+        %tmp.7 = getv %tmp.6 :Menus;
+        %tmp.8 = getv function ? %tmp.7 :MainMenu;
+        %tmp.3 = newc %tmp.8 ();
+        %tmp.12 = getv ? :eSportAppMenuDelegate;
+        %tmp.9 = newc %tmp.12 ();
+        %tmp.13 = getm $.Toybox.WatchUi;
+        %tmp.14 = getv %tmp.13 :SLIDE_UP;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9, %tmp.14);
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 30 8 ]
+        %tmp.15 = true;
+        ret %tmp.15;
+C_git_clones_eSportApp_source_eSportAppView_mc_28_22_31_4_stop:
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 33; ]
+    function onSelect() {
+C_git_clones_eSportApp_source_eSportAppView_mc_33_21_64_1_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 34 4 ]
+C_git_clones_eSportApp_source_eSportAppView_mc_34_4_62_4_if_stmt:
+        %tmp.2 = getv ? :Toybox;
+        %tmp.4 = const :ActivityRecording;
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @C_git_clones_eSportApp_source_eSportAppView_mc_34_4_62_4_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_34_4_62_4_if_true:
+C_git_clones_eSportApp_source_eSportAppView_mc_34_39_62_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 35 8 ]
+C_git_clones_eSportApp_source_eSportAppView_mc_35_8_61_8_if_stmt:
+C_git_clones_eSportApp_source_eSportAppView_mc_35_12_35_64_begin:
+        %tmp.7 = getv ? :session;
+        %tmp.8 = null;
+        %tmp.9 = eq %tmp.7 %tmp.8;
+        bt %tmp.9 @C_git_clones_eSportApp_source_eSportAppView_mc_35_8_61_8_if_true;
+C_git_clones_eSportApp_source_eSportAppView_mc_35_33_35_64_false:
+        %tmp.11 = getv ? :session;
+        %tmp.12 = as %tmp.11 { (!Null) };
+        %tmp.13 = getv function %tmp.12 :isRecording;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = false;
+        %tmp.16 = eq %tmp.14 %tmp.15;
+        push %tmp.16;
+C_git_clones_eSportApp_source_eSportAppView_mc_35_33_35_64_end:
+        %tmp.17 = phi [%tmp.9 @C_git_clones_eSportApp_source_eSportAppView_mc_35_12_35_64_begin] [%tmp.16 @C_git_clones_eSportApp_source_eSportAppView_mc_35_33_35_64_false] [%tmp.17 @C_git_clones_eSportApp_source_eSportAppView_mc_35_33_35_64_end];
+        bf %tmp.17 @C_git_clones_eSportApp_source_eSportAppView_mc_35_8_61_8_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_35_8_61_8_if_true:
+C_git_clones_eSportApp_source_eSportAppView_mc_35_67_49_8_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 36 12 ]
+        %tmp.18 = getm $.Toybox.ActivityRecording;
+        %tmp.19 = getv function %tmp.18 :createSession;
+        %tmp.20 = newd 3;
+        %tmp.22 = const :name;
+        %tmp.23 = "Generic";
+        %tmp.24 = dup %tmp.20;
+        %tmp.25 = aputv %tmp.24 %tmp.22 %tmp.23;
+        %tmp.27 = const :sport;
+        %tmp.28 = getm $.Toybox.Activity;
+        %tmp.29 = getv %tmp.28 :SPORT_GENERIC;
+        %tmp.30 = dup %tmp.25;
+        %tmp.31 = aputv %tmp.30 %tmp.27 %tmp.29;
+        %tmp.33 = const :subSport;
+        %tmp.34 = getm $.Toybox.Activity;
+        %tmp.35 = getv %tmp.34 :SUB_SPORT_GENERIC;
+        %tmp.36 = dup %tmp.31;
+        %tmp.37 = aputv %tmp.36 %tmp.33 %tmp.35;
+        %tmp.38 = invoke %tmp.18 %tmp.19(%tmp.37);
+        putv self :session %tmp.38;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 41 12 ]
+        %tmp.40 = getv ? :session;
+        %tmp.41 = getv function %tmp.40 :createField;
+        %tmp.42 = "Game";
+        %tmp.44 = getv ? :GAME_FIELD_ID;
+        %tmp.45 = getm $.Toybox.FitContributor;
+        %tmp.46 = getv %tmp.45 :DATA_TYPE_STRING;
+        %tmp.47 = newd 2;
+        %tmp.49 = const :count;
+        %tmp.51 = getv ? :GAME_NAME_LEN;
+        %tmp.52 = dup %tmp.47;
+        %tmp.53 = aputv %tmp.52 %tmp.49 %tmp.51;
+        %tmp.55 = const :mesgType;
+        %tmp.56 = getm $.Toybox.FitContributor;
+        %tmp.57 = getv %tmp.56 :MESG_TYPE_SESSION;
+        %tmp.58 = dup %tmp.53;
+        %tmp.59 = aputv %tmp.58 %tmp.55 %tmp.57;
+        %tmp.60 = invoke %tmp.40 %tmp.41(%tmp.42, %tmp.44, %tmp.46, %tmp.59);
+        putv self :gameField %tmp.60;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 42 12 ]
+        %tmp.62 = getv ? :session;
+        %tmp.63 = getv function %tmp.62 :start;
+        invoke %tmp.62 %tmp.63();
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 43 12 ]
+        %tmp.64 = "Started";
+        putv self :appStatus %tmp.64;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 44 12 ]
+        %tmp.65 = getm $.Toybox.System;
+        %tmp.66 = getv function %tmp.65 :println;
+        %tmp.67 = "Started";
+        invoke %tmp.65 %tmp.66(%tmp.67);
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 45 12 ]
+        %tmp.68 = getm $.Toybox.WatchUi;
+        %tmp.69 = getv function %tmp.68 :requestUpdate;
+        invoke %tmp.68 %tmp.69();
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 48 12 ]
+        %tmp.71 = getv ? :timerPostHR;
+        %tmp.72 = getv function %tmp.71 :start;
+        %tmp.73 = self;
+        %tmp.74 = getv function %tmp.73 :method;
+        %tmp.76 = const :makeHRRequest;
+        %tmp.77 = invoke %tmp.73 %tmp.74(%tmp.76);
+        %tmp.78 = 500;
+        %tmp.79 = true;
+        invoke %tmp.71 %tmp.72(%tmp.77, %tmp.78, %tmp.79);
+C_git_clones_eSportApp_source_eSportAppView_mc_35_67_49_8_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppView_mc_35_8_61_8_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_35_8_61_8_if_false:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 50 13 ]
+C_git_clones_eSportApp_source_eSportAppView_mc_50_13_61_8_if_stmt:
+C_git_clones_eSportApp_source_eSportAppView_mc_50_17_50_58_begin:
+        %tmp.81 = getv ? :session;
+        %tmp.82 = null;
+        %tmp.83 = ne %tmp.81 %tmp.82;
+        bf %tmp.83 @C_git_clones_eSportApp_source_eSportAppView_mc_50_13_61_8_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_50_38_50_58_true:
+        %tmp.85 = getv ? :session;
+        %tmp.86 = as %tmp.85 { (!Null) };
+        %tmp.87 = getv function %tmp.86 :isRecording;
+        %tmp.88 = invoke %tmp.86 %tmp.87();
+        push %tmp.88;
+C_git_clones_eSportApp_source_eSportAppView_mc_50_38_50_58_end:
+        %tmp.89 = phi [%tmp.83 @C_git_clones_eSportApp_source_eSportAppView_mc_50_17_50_58_begin] [%tmp.88 @C_git_clones_eSportApp_source_eSportAppView_mc_50_38_50_58_true] [%tmp.89 @C_git_clones_eSportApp_source_eSportAppView_mc_50_38_50_58_end];
+        bf %tmp.89 @C_git_clones_eSportApp_source_eSportAppView_mc_50_13_61_8_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_50_13_61_8_if_true:
+C_git_clones_eSportApp_source_eSportAppView_mc_50_61_61_8_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 51 12 ]
+        %tmp.91 = getv ? :gameField;
+        %tmp.92 = getv function %tmp.91 :setData;
+        %tmp.94 = getv ? :gameName;
+        %tmp.95 = getv function %tmp.94 :substring;
+        %tmp.96 = 0;
+        %tmp.98 = getv ? :GAME_NAME_LEN;
+        %tmp.99 = invoke %tmp.94 %tmp.95(%tmp.96, %tmp.98);
+        invoke %tmp.91 %tmp.92(%tmp.99);
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 52 12 ]
+        %tmp.101 = getv ? :session;
+        %tmp.102 = getv function %tmp.101 :stop;
+        invoke %tmp.101 %tmp.102();
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 53 12 ]
+        %tmp.103 = "Stopped";
+        putv self :appStatus %tmp.103;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 54 12 ]
+        %tmp.104 = getm $.Toybox.System;
+        %tmp.105 = getv function %tmp.104 :println;
+        %tmp.106 = "Stopped";
+        invoke %tmp.104 %tmp.105(%tmp.106);
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 55 12 ]
+        %tmp.108 = getv ? :session;
+        %tmp.109 = getv function %tmp.108 :save;
+        invoke %tmp.108 %tmp.109();
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 56 12 ]
+        %tmp.110 = null;
+        putv self :session %tmp.110;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 57 12 ]
+        %tmp.111 = "No Game";
+        putv self :gameName %tmp.111;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 58 12 ]
+        %tmp.112 = getm $.Toybox.WatchUi;
+        %tmp.113 = getv function %tmp.112 :requestUpdate;
+        invoke %tmp.112 %tmp.113();
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 60 12 ]
+        %tmp.115 = getv ? :timerPostHR;
+        %tmp.116 = getv function %tmp.115 :stop;
+        invoke %tmp.115 %tmp.116();
+C_git_clones_eSportApp_source_eSportAppView_mc_50_61_61_8_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppView_mc_50_13_61_8_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_50_13_61_8_if_end:
+C_git_clones_eSportApp_source_eSportAppView_mc_35_8_61_8_if_end:
+C_git_clones_eSportApp_source_eSportAppView_mc_34_39_62_4_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppView_mc_34_4_62_4_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_34_4_62_4_if_end:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 63 4 ]
+        %tmp.117 = true;
+        ret %tmp.117;
+C_git_clones_eSportApp_source_eSportAppView_mc_33_21_64_1_stop:
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 66; ]
+    function onHRReceive(responseCode as Number, data as Dictionary or Null) as Void {
+C_git_clones_eSportApp_source_eSportAppView_mc_66_75_73_1_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 67 5 ]
+C_git_clones_eSportApp_source_eSportAppView_mc_67_5_71_5_if_stmt:
+        %tmp.2 = lgetv %responseCode;
+        %tmp.3 = 200;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_git_clones_eSportApp_source_eSportAppView_mc_67_5_71_5_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_67_5_71_5_if_true:
+C_git_clones_eSportApp_source_eSportAppView_mc_67_30_69_5_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 68 9 ]
+        %tmp.5 = getm $.Toybox.System;
+        %tmp.6 = getv function %tmp.5 :println;
+        %tmp.8 = lgetv %data;
+        invoke %tmp.5 %tmp.6(%tmp.8);
+C_git_clones_eSportApp_source_eSportAppView_mc_67_30_69_5_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppView_mc_67_5_71_5_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_67_5_71_5_if_false:
+C_git_clones_eSportApp_source_eSportAppView_mc_69_12_71_5_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 70 9 ]
+        %tmp.9 = getm $.Toybox.System;
+        %tmp.10 = getv function %tmp.9 :println;
+        %tmp.11 = "Failed to load\nError: ";
+        %tmp.12 = lgetv %responseCode;
+        %tmp.13 = getv function %tmp.12 :toString;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = add %tmp.11 %tmp.14;
+        invoke %tmp.9 %tmp.10(%tmp.15);
+C_git_clones_eSportApp_source_eSportAppView_mc_69_12_71_5_stop:
+C_git_clones_eSportApp_source_eSportAppView_mc_67_5_71_5_if_end:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 72 5 ]
+        %tmp.16 = getm $.Toybox.WatchUi;
+        %tmp.17 = getv function %tmp.16 :requestUpdate;
+        invoke %tmp.16 %tmp.17();
+C_git_clones_eSportApp_source_eSportAppView_mc_66_75_73_1_stop:
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 75; ]
+    function makeHRRequest() {
+C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 76 2 ]
+        [ "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_start" "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_stop" ]
+        %url.1 = local;
+        %tmp.1 = "http://localhost:90/add_heart_rate.php";
+        lputv %url.1 %tmp.1;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 77 2 ]
+        [ "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_start" "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_stop" ]
+        %params.2 = local;
+        %tmp.2 = newd 1;
+        %tmp.3 = "heart_rate";
+        %tmp.5 = getv ? :currentHR;
+        %tmp.6 = dup %tmp.2;
+        %tmp.7 = aputv %tmp.6 %tmp.3 %tmp.5;
+        lputv %params.2 %tmp.7;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 81 7 ]
+        [ "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_start" "C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_stop" ]
+        %options.3 = local;
+        %tmp.8 = newd 3;
+        %tmp.10 = const :method;
+        %tmp.11 = getm $.Toybox.Communications;
+        %tmp.12 = getv %tmp.11 :HTTP_REQUEST_METHOD_POST;
+        %tmp.13 = dup %tmp.8;
+        %tmp.14 = aputv %tmp.13 %tmp.10 %tmp.12;
+        %tmp.16 = const :headers;
+        %tmp.17 = newd 1;
+        %tmp.18 = "Content-Type";
+        %tmp.19 = getm $.Toybox.Communications;
+        %tmp.20 = getv %tmp.19 :REQUEST_CONTENT_TYPE_URL_ENCODED;
+        %tmp.21 = dup %tmp.17;
+        %tmp.22 = aputv %tmp.21 %tmp.18 %tmp.20;
+        %tmp.23 = dup %tmp.14;
+        %tmp.24 = aputv %tmp.23 %tmp.16 %tmp.22;
+        %tmp.26 = const :responseType;
+        %tmp.27 = getm $.Toybox.Communications;
+        %tmp.28 = getv %tmp.27 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.29 = dup %tmp.24;
+        %tmp.30 = aputv %tmp.29 %tmp.26 %tmp.28;
+        lputv %options.3 %tmp.30;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 86 7 ]
+        %tmp.31 = getm $.Toybox.Communications;
+        %tmp.32 = getv function %tmp.31 :makeWebRequest;
+        %tmp.34 = lgetv %url.1;
+        %tmp.36 = lgetv %params.2;
+        %tmp.38 = lgetv %options.3;
+        %tmp.39 = self;
+        %tmp.40 = getv function %tmp.39 :method;
+        %tmp.42 = const :onHRReceive;
+        %tmp.43 = invoke %tmp.39 %tmp.40(%tmp.42);
+        invoke %tmp.31 %tmp.32(%tmp.34, %tmp.36, %tmp.38, %tmp.43);
+C_git_clones_eSportApp_source_eSportAppView_mc_75_26_87_1_stop:
+    }
+}
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 118; ]
+class eSportAppView extends WatchUi.View{
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 118; ]
+    <init> {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 118; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 119; ]
+    function initialize() as Void {
+C_git_clones_eSportApp_source_eSportAppView_mc_119_26_123_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 120 8 ]
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 121 8 ]
+        %tmp.6 = getm $.Toybox.Timer;
+        %tmp.7 = getv function ? %tmp.6 :Timer;
+        %tmp.4 = newc %tmp.7 ();
+        putv self :timerPostHR %tmp.4;
+C_git_clones_eSportApp_source_eSportAppView_mc_119_26_123_4_stop:
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 125; ]
+    function onLayout(dc) {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 128; ]
+    function onShow() {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 133; ]
+    function onHide() {
+C_git_clones_eSportApp_source_eSportAppView_mc_133_22_136_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 134 5 ]
+        %tmp.2 = getv ? :timerPostHR;
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+C_git_clones_eSportApp_source_eSportAppView_mc_133_22_136_4_stop:
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 139; ]
+    function onUpdate(dc) {
+C_git_clones_eSportApp_source_eSportAppView_mc_139_26_169_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 142 8 ]
+        [ "C_git_clones_eSportApp_source_eSportAppView_mc_139_26_169_4_start" "C_git_clones_eSportApp_source_eSportAppView_mc_139_26_169_4_stop" ]
+        %width.1 = local;
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 143 5 ]
+        [ "C_git_clones_eSportApp_source_eSportAppView_mc_139_26_169_4_start" "C_git_clones_eSportApp_source_eSportAppView_mc_139_26_169_4_stop" ]
+        %height.2 = local;
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 144 2 ]
+        [ "C_git_clones_eSportApp_source_eSportAppView_mc_139_26_169_4_start" "C_git_clones_eSportApp_source_eSportAppView_mc_139_26_169_4_stop" ]
+        %color.3 = local;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 145 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :setColor;
+        %tmp.10 = getv ? :Graphics;
+        %tmp.11 = getv %tmp.10 :COLOR_WHITE;
+        %tmp.13 = getv ? :Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_BLACK;
+        invoke %tmp.7 %tmp.8(%tmp.11, %tmp.14);
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 146 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :clear;
+        invoke %tmp.15 %tmp.16();
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 148 8 ]
+        %tmp.17 = getm $.Toybox.Activity;
+        %tmp.18 = getv function %tmp.17 :getActivityInfo;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = getv %tmp.19 :currentHeartRate;
+        putv self :currentHR %tmp.20;
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 149 8 ]
+C_git_clones_eSportApp_source_eSportAppView_mc_149_8_167_2_if_stmt:
+        %tmp.22 = getv ? :currentHR;
+        %tmp.23 = null;
+        %tmp.24 = ne %tmp.22 %tmp.23;
+        bf %tmp.24 @C_git_clones_eSportApp_source_eSportAppView_mc_149_8_167_2_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_149_8_167_2_if_true:
+C_git_clones_eSportApp_source_eSportAppView_mc_149_29_165_8_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 151 3 ]
+C_git_clones_eSportApp_source_eSportAppView_mc_151_3_161_3_if_stmt:
+        %tmp.26 = getv ? :currentHR;
+        %tmp.27 = as %tmp.26 { (!Null) };
+        %tmp.28 = 100;
+        %tmp.29 = lt %tmp.27 %tmp.28;
+        bf %tmp.29 @C_git_clones_eSportApp_source_eSportAppView_mc_151_3_161_3_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_151_3_161_3_if_true:
+C_git_clones_eSportApp_source_eSportAppView_mc_151_24_153_3_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 152 4 ]
+        %tmp.31 = getv ? :Graphics;
+        %tmp.32 = getv %tmp.31 :COLOR_BLUE;
+        lputv %color.3 %tmp.32;
+C_git_clones_eSportApp_source_eSportAppView_mc_151_24_153_3_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppView_mc_151_3_161_3_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_151_3_161_3_if_false:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 153 10 ]
+C_git_clones_eSportApp_source_eSportAppView_mc_153_10_161_3_if_stmt:
+C_git_clones_eSportApp_source_eSportAppView_mc_153_14_153_46_begin:
+        %tmp.34 = getv ? :currentHR;
+        %tmp.35 = as %tmp.34 { (!Null) };
+        %tmp.36 = 100;
+        %tmp.37 = gte %tmp.35 %tmp.36;
+        bf %tmp.37 @C_git_clones_eSportApp_source_eSportAppView_mc_153_10_161_3_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_153_34_153_46_true:
+        %tmp.39 = getv ? :currentHR;
+        %tmp.40 = as %tmp.39 { (!Null) };
+        %tmp.41 = 118;
+        %tmp.42 = lt %tmp.40 %tmp.41;
+        push %tmp.42;
+C_git_clones_eSportApp_source_eSportAppView_mc_153_34_153_46_end:
+        %tmp.43 = phi [%tmp.37 @C_git_clones_eSportApp_source_eSportAppView_mc_153_14_153_46_begin] [%tmp.42 @C_git_clones_eSportApp_source_eSportAppView_mc_153_34_153_46_true] [%tmp.43 @C_git_clones_eSportApp_source_eSportAppView_mc_153_34_153_46_end];
+        bf %tmp.43 @C_git_clones_eSportApp_source_eSportAppView_mc_153_10_161_3_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_153_10_161_3_if_true:
+C_git_clones_eSportApp_source_eSportAppView_mc_153_51_155_3_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 154 4 ]
+        %tmp.45 = getv ? :Graphics;
+        %tmp.46 = getv %tmp.45 :COLOR_GREEN;
+        lputv %color.3 %tmp.46;
+C_git_clones_eSportApp_source_eSportAppView_mc_153_51_155_3_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppView_mc_153_10_161_3_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_153_10_161_3_if_false:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 155 10 ]
+C_git_clones_eSportApp_source_eSportAppView_mc_155_10_161_3_if_stmt:
+C_git_clones_eSportApp_source_eSportAppView_mc_155_14_155_46_begin:
+        %tmp.48 = getv ? :currentHR;
+        %tmp.49 = as %tmp.48 { (!Null) };
+        %tmp.50 = 118;
+        %tmp.51 = gte %tmp.49 %tmp.50;
+        bf %tmp.51 @C_git_clones_eSportApp_source_eSportAppView_mc_155_10_161_3_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_155_34_155_46_true:
+        %tmp.53 = getv ? :currentHR;
+        %tmp.54 = as %tmp.53 { (!Null) };
+        %tmp.55 = 134;
+        %tmp.56 = lt %tmp.54 %tmp.55;
+        push %tmp.56;
+C_git_clones_eSportApp_source_eSportAppView_mc_155_34_155_46_end:
+        %tmp.57 = phi [%tmp.51 @C_git_clones_eSportApp_source_eSportAppView_mc_155_14_155_46_begin] [%tmp.56 @C_git_clones_eSportApp_source_eSportAppView_mc_155_34_155_46_true] [%tmp.57 @C_git_clones_eSportApp_source_eSportAppView_mc_155_34_155_46_end];
+        bf %tmp.57 @C_git_clones_eSportApp_source_eSportAppView_mc_155_10_161_3_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_155_10_161_3_if_true:
+C_git_clones_eSportApp_source_eSportAppView_mc_155_51_157_3_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 156 4 ]
+        %tmp.59 = getv ? :Graphics;
+        %tmp.60 = getv %tmp.59 :COLOR_YELLOW;
+        lputv %color.3 %tmp.60;
+C_git_clones_eSportApp_source_eSportAppView_mc_155_51_157_3_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppView_mc_155_10_161_3_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_155_10_161_3_if_false:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 157 10 ]
+C_git_clones_eSportApp_source_eSportAppView_mc_157_10_161_3_if_stmt:
+C_git_clones_eSportApp_source_eSportAppView_mc_157_14_157_46_begin:
+        %tmp.62 = getv ? :currentHR;
+        %tmp.63 = as %tmp.62 { (!Null) };
+        %tmp.64 = 134;
+        %tmp.65 = gte %tmp.63 %tmp.64;
+        bf %tmp.65 @C_git_clones_eSportApp_source_eSportAppView_mc_157_10_161_3_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_157_34_157_46_true:
+        %tmp.67 = getv ? :currentHR;
+        %tmp.68 = as %tmp.67 { (!Null) };
+        %tmp.69 = 151;
+        %tmp.70 = lt %tmp.68 %tmp.69;
+        push %tmp.70;
+C_git_clones_eSportApp_source_eSportAppView_mc_157_34_157_46_end:
+        %tmp.71 = phi [%tmp.65 @C_git_clones_eSportApp_source_eSportAppView_mc_157_14_157_46_begin] [%tmp.70 @C_git_clones_eSportApp_source_eSportAppView_mc_157_34_157_46_true] [%tmp.71 @C_git_clones_eSportApp_source_eSportAppView_mc_157_34_157_46_end];
+        bf %tmp.71 @C_git_clones_eSportApp_source_eSportAppView_mc_157_10_161_3_if_false;
+C_git_clones_eSportApp_source_eSportAppView_mc_157_10_161_3_if_true:
+C_git_clones_eSportApp_source_eSportAppView_mc_157_51_159_3_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 158 4 ]
+        %tmp.73 = getv ? :Graphics;
+        %tmp.74 = getv %tmp.73 :COLOR_ORANGE;
+        lputv %color.3 %tmp.74;
+C_git_clones_eSportApp_source_eSportAppView_mc_157_51_159_3_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppView_mc_157_10_161_3_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_157_10_161_3_if_false:
+C_git_clones_eSportApp_source_eSportAppView_mc_159_10_161_3_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 160 4 ]
+        %tmp.76 = getv ? :Graphics;
+        %tmp.77 = getv %tmp.76 :COLOR_RED;
+        lputv %color.3 %tmp.77;
+C_git_clones_eSportApp_source_eSportAppView_mc_159_10_161_3_stop:
+C_git_clones_eSportApp_source_eSportAppView_mc_157_10_161_3_if_end:
+C_git_clones_eSportApp_source_eSportAppView_mc_155_10_161_3_if_end:
+C_git_clones_eSportApp_source_eSportAppView_mc_153_10_161_3_if_end:
+C_git_clones_eSportApp_source_eSportAppView_mc_151_3_161_3_if_end:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 162 3 ]
+        %tmp.78 = lgetv %dc;
+        %tmp.79 = getv function %tmp.78 :setColor;
+        %tmp.81 = lgetv %color.3;
+        %tmp.83 = getv ? :Graphics;
+        %tmp.84 = getv %tmp.83 :COLOR_BLACK;
+        invoke %tmp.78 %tmp.79(%tmp.81, %tmp.84);
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 163 9 ]
+        %tmp.85 = lgetv %dc;
+        %tmp.86 = getv function %tmp.85 :drawText;
+        %tmp.88 = lgetv %width.1;
+        %tmp.89 = 2;
+        %tmp.90 = div %tmp.88 %tmp.89;
+        %tmp.92 = lgetv %height.2;
+        %tmp.93 = 4;
+        %tmp.94 = div %tmp.92 %tmp.93;
+        %tmp.96 = getv ? :Graphics;
+        %tmp.97 = getv %tmp.96 :FONT_SYSTEM_NUMBER_THAI_HOT;
+        %tmp.99 = getv ? :currentHR;
+        %tmp.101 = getv ? :Graphics;
+        %tmp.102 = getv %tmp.101 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.85 %tmp.86(%tmp.90, %tmp.94, %tmp.97, %tmp.99, %tmp.102);
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 164 4 ]
+        %tmp.103 = lgetv %dc;
+        %tmp.104 = getv function %tmp.103 :setColor;
+        %tmp.106 = getv ? :Graphics;
+        %tmp.107 = getv %tmp.106 :COLOR_WHITE;
+        %tmp.109 = getv ? :Graphics;
+        %tmp.110 = getv %tmp.109 :COLOR_BLACK;
+        invoke %tmp.103 %tmp.104(%tmp.107, %tmp.110);
+C_git_clones_eSportApp_source_eSportAppView_mc_149_29_165_8_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppView_mc_149_8_167_2_if_end;
+C_git_clones_eSportApp_source_eSportAppView_mc_149_8_167_2_if_false:
+C_git_clones_eSportApp_source_eSportAppView_mc_165_15_167_2_start:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 166 3 ]
+        %tmp.111 = lgetv %dc;
+        %tmp.112 = getv function %tmp.111 :drawText;
+        %tmp.114 = lgetv %width.1;
+        %tmp.115 = 2;
+        %tmp.116 = div %tmp.114 %tmp.115;
+        %tmp.118 = lgetv %height.2;
+        %tmp.119 = 4;
+        %tmp.120 = div %tmp.118 %tmp.119;
+        %tmp.122 = getv ? :Graphics;
+        %tmp.123 = getv %tmp.122 :FONT_SYSTEM_NUMBER_THAI_HOT;
+        %tmp.124 = "No HR";
+        %tmp.126 = getv ? :Graphics;
+        %tmp.127 = getv %tmp.126 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.111 %tmp.112(%tmp.116, %tmp.120, %tmp.123, %tmp.124, %tmp.127);
+C_git_clones_eSportApp_source_eSportAppView_mc_165_15_167_2_stop:
+C_git_clones_eSportApp_source_eSportAppView_mc_149_8_167_2_if_end:
+[ "C:\git_clones\eSportApp\source\eSportAppView.mc" 168 8 ]
+        %tmp.128 = lgetv %dc;
+        %tmp.129 = getv function %tmp.128 :drawText;
+        %tmp.131 = lgetv %width.1;
+        %tmp.132 = 2;
+        %tmp.133 = div %tmp.131 %tmp.132;
+        %tmp.135 = lgetv %height.2;
+        %tmp.136 = 4;
+        %tmp.137 = div %tmp.135 %tmp.136;
+        %tmp.138 = 3;
+        %tmp.139 = mul %tmp.137 %tmp.138;
+        %tmp.141 = getv ? :Graphics;
+        %tmp.142 = getv %tmp.141 :FONT_LARGE;
+        %tmp.144 = getv ? :appStatus;
+        %tmp.146 = getv ? :Graphics;
+        %tmp.147 = getv %tmp.146 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.128 %tmp.129(%tmp.133, %tmp.139, %tmp.142, %tmp.144, %tmp.147);
+C_git_clones_eSportApp_source_eSportAppView_mc_139_26_169_4_stop:
+    }
+}
+[ @file = "C:\git_clones\eSportApp\source\eSportAppView.mc"; @line = 1; ]
+<init> {
+}

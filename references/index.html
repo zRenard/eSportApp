@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.heart {
+  background-color: #f44336;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  transform: rotate(45deg);
+  animation: animateHeart 1.2s infinite;
+}
+.heart::before, .heart::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: #f44336;
+  position: absolute;
+  border-radius: 50%;
+}
+.heart::before {
+  left: -12px;
+}
+.heart::after {
+  top: -12px;
+}
+
+@keyframes animateHeart {
+  0% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  5% {
+    transform: rotate(45deg) scale(0.9);
+  }
+  10% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  15% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.8);
+  }
+}
+body {
+  padding: 5rem;
+  background-color: #fff;
+  height: calc(100vh - 10rem);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.minibar {
+  display: flex;
+  align-items: flex-end;
+}
+
+.minibar__bar {
+  position: relative;
+  flex: 1;
+  margin-right: 1px;
+}
+
+.minibar__bar:hover .minibar__fill {
+  background-color: #ccc;
+}
+
+.minibar__bar:hover .minibar__tooltip {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.minibar__tooltip {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 20px;
+  margin-left: -10px;
+  text-align: center;
+  background-color: #666;
+  color: #eee;
+  font-size: 10px;
+  font-family: monospace;
+  line-height: 12px;
+  padding: 4px;
+  opacity: 0;
+  transition: transform 0.3s;
+  transform: translateY(0);
+  pointer-events: none;
+  z-index: 50;
+}
+
+.minibar--mini {
+  height: 50px;
+}
+
+.minibar--mini .minibar__bar {
+  max-width: 10px;
+  height: 100%;
+}
+
+.minibar__fill {
+  position: absolute;
+  background-color: #42b983;
+  min-height: 5px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
+.minibar {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+}
+</style>
+</head>
+
+<body>
+152 bpm
+<div class="minibar minibar--mini">
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Jan<br>10</span>
+    <div class="minibar__fill" style="height:10%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Feb<br>20</span>
+    <div class="minibar__fill" style="height:20%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Mar<br>30</span>
+    <div class="minibar__fill" style="height:30%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Apr<br>25</span>
+    <div class="minibar__fill" style="height:25%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">May<br>40</span>
+    <div class="minibar__fill" style="height:40%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Jun<br>70</span>
+    <div class="minibar__fill" style="height:70%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Jul<br>80</span>
+    <div class="minibar__fill" style="height:80%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Aug<br>100</span>
+    <div class="minibar__fill" style="height:100%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Sep<br>60</span>
+    <div class="minibar__fill" style="height:60%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Oct<br>50</span>
+    <div class="minibar__fill" style="height:50%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Nov<br>40</span>
+    <div class="minibar__fill" style="height:40%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Dec<br>35</span>
+    <div class="minibar__fill" style="height:35%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Dec<br>35</span>
+    <div class="minibar__fill" style="height:35%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Dec<br>35</span>
+    <div class="minibar__fill" style="height:35%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Dec<br>35</span>
+    <div class="minibar__fill" style="height:35%"></div>
+  </div>
+  <div class="minibar__bar">
+    <span class="minibar__tooltip">Dec<br>35</span>
+    <div class="minibar__fill" style="height:35%"></div>
+  </div>
+</div>
+<div class="center">
+  <div class="heart">
+  </div>
+</div>
+</body>
+</html>

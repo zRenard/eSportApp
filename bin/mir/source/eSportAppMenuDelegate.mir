@@ -1,0 +1,64 @@
+[ @file = "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc"; @line = 1; ]
+using Toybox.WatchUi;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc"; @line = 2; ]
+using Toybox.System;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc"; @line = 4; ]
+class eSportAppMenuDelegate extends WatchUi.MenuInputDelegate{
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc"; @line = 6; ]
+    function initialize() as Void {
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_6_26_8_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc" 7 8 ]
+        %tmp.2 = getv ? :MenuInputDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_6_26_8_4_stop:
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc"; @line = 10; ]
+    function onMenuItem(item) {
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_10_30_16_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc" 11 8 ]
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_11_8_15_8_if_stmt:
+        %tmp.2 = lgetv %item;
+        %tmp.4 = const :item_1;
+        %tmp.5 = eq %tmp.2 %tmp.4;
+        bf %tmp.5 @C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_11_8_15_8_if_false;
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_11_8_15_8_if_true:
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_11_29_13_8_start:
+[ "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc" 12 12 ]
+        %tmp.6 = getm $.Toybox.System;
+        %tmp.7 = getv function %tmp.6 :println;
+        %tmp.8 = "item 1";
+        invoke %tmp.6 %tmp.7(%tmp.8);
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_11_29_13_8_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_11_8_15_8_if_end;
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_11_8_15_8_if_false:
+[ "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc" 13 15 ]
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_13_15_15_8_if_stmt:
+        %tmp.10 = lgetv %item;
+        %tmp.12 = const :item_2;
+        %tmp.13 = eq %tmp.10 %tmp.12;
+        bf %tmp.13 @C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_13_15_15_8_if_end;
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_13_15_15_8_if_true:
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_13_36_15_8_start:
+[ "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc" 14 12 ]
+        %tmp.14 = getm $.Toybox.System;
+        %tmp.15 = getv function %tmp.14 :println;
+        %tmp.16 = "item 2";
+        invoke %tmp.14 %tmp.15(%tmp.16);
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_13_36_15_8_stop:
+        goto @C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_13_15_15_8_if_end;
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_13_15_15_8_if_end:
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_11_8_15_8_if_end:
+C_git_clones_eSportApp_source_eSportAppMenuDelegate_mc_10_30_16_4_stop:
+    }
+}
+[ @file = "C:\git_clones\eSportApp\source\eSportAppMenuDelegate.mc"; @line = 1; ]
+<init> {
+}

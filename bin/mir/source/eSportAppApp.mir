@@ -1,0 +1,48 @@
+[ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 1; ]
+using Toybox.Application;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 4; ]
+class eSportAppApp extends Application.AppBase{
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 6; ]
+    function initialize() as Void {
+C_git_clones_eSportApp_source_eSportAppApp_mc_6_26_8_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppApp.mc" 7 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_git_clones_eSportApp_source_eSportAppApp_mc_6_26_8_4_stop:
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 11; ]
+    function onStart(state) {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 15; ]
+    function onStop(state) {
+    }
+    [ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 19; ]
+    function getInitialView() {
+C_git_clones_eSportApp_source_eSportAppApp_mc_19_30_21_4_start:
+[ "C:\git_clones\eSportApp\source\eSportAppApp.mc" 20 8 ]
+        %tmp.1 = newa 2;
+        %tmp.5 = getv ? :eSportAppView;
+        %tmp.2 = newc %tmp.5 ();
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.2;
+        %tmp.11 = getv ? :eSportAppDelegate;
+        %tmp.8 = newc %tmp.11 ();
+        %tmp.12 = dup %tmp.7;
+        %tmp.13 = aputv %tmp.12 1 %tmp.8;
+        ret %tmp.13;
+C_git_clones_eSportApp_source_eSportAppApp_mc_19_30_21_4_stop:
+    }
+}
+[ @file = "C:\git_clones\eSportApp\source\eSportAppApp.mc"; @line = 1; ]
+<init> {
+}
